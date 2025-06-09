@@ -3,104 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Narendra Prasad | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Narendra Prasad Neerugattu | Professional Portfolio</title>
   <style>
-    /* Additional inline styles for color accents */
+    /* Reset & base */
     body {
-      background: #f0f4f8;
-      color: #333;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      color: #2c3e50;
+      line-height: 1.6;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
-    header {
-      background: linear-gradient(90deg, #0066cc, #00ccff);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      margin-bottom: 0;
-      font-size: 3em;
-      letter-spacing: 1px;
-    }
-    header p {
-      font-size: 1.25em;
-      margin-top: 10px;
-      font-weight: 500;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
+    .container {
+      max-width: 900px;
+      margin: auto;
       background: white;
-      border-radius: 12px;
       padding: 30px 40px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
-    section h2 {
-      color: #0077cc;
-      border-bottom: 3px solid #00ccff;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
+    h1, h2, h3 {
+      color: #34495e;
+      margin-bottom: 0.25em;
+    }
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
       font-weight: 700;
+    }
+    h2 {
+      border-left: 5px solid #3498db;
+      padding-left: 10px;
+      margin-top: 40px;
+      font-weight: 600;
+    }
+    p, ul {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 15px;
     }
     ul {
       list-style-type: square;
       padding-left: 20px;
     }
     ul li {
-      margin-bottom: 12px;
-      font-size: 1.1em;
+      margin-bottom: 8px;
     }
-    a {
-      color: #0077cc;
-      text-decoration: none;
+    .contact-info {
+      background: #3498db;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      margin-bottom: 40px;
       font-weight: 600;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .contact-info span, .contact-info a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: white;
     }
     a:hover {
       text-decoration: underline;
-      color: #005999;
     }
-    footer {
-      background: #004a99;
-      color: white;
-      text-align: center;
-      padding: 25px 10px;
-      font-weight: 500;
-      margin-top: 60px;
+    .section-title {
+      color: #2980b9;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .experience {
+      border-left: 4px solid #2980b9;
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+    .experience h3 {
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .experience p, .experience ul {
+      margin-bottom: 8px;
+    }
+    .skills-list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      list-style-type: circle;
+      padding-left: 20px;
+    }
+    @media(max-width: 600px) {
+      .skills-list {
+        columns: 1;
+      }
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Narendra Prasad</h1>
-    <p>DevOps Engineer | OpenShift | 3scale | Tekton | ArgoCD</p>
-  </header>
+  <div class="container">
+    <h1>Narendra Prasad Neerugattu</h1>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I specialize in OpenShift platform administration, CI/CD pipelines, GitOps, and service mesh observability. Passionate about building scalable and reliable cloud-native applications.</p>
-  </section>
+    <div class="contact-info">
+      <span>📞 +91 9989774167</span>
+      <span>✉️ <a href="mailto:narendralucky290@gmail.com">narendralucky290@gmail.com</a></span>
+      <span>LinkedIn: <a href="https://www.linkedin.com/in/narendra-prasad-neerugattu" target="_blank" rel="noopener">Narendra Prasad Neerugattu</a></span>
+      <span>GitHub: <a href="https://github.com/narendralucky333" target="_blank" rel="noopener">narendralucky333</a></span>
+    </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>🔧 Multi-cluster CI/CD pipeline with Tekton + ArgoCD</li>
-      <li>📦 3scale API Management automation using Helm</li>
-      <li>📊 Monitoring setup using Prometheus, Grafana, ELK</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Certified DevOps Engineer with over 3 years of experience in OpenShift administration, CI/CD pipelines, and containerization. Specialized in automating deployments using Tekton, GitLab CI, and ArgoCD for GitOps-driven continuous deployment. Skilled in managing OpenShift clusters, scaling applications with HPA/VPA, and optimizing resource utilization. Proficient in service mesh technologies like Istio, API management using 3scale, and cloud infrastructure on AWS. Experienced in Keycloak for Single Sign-On (SSO) and user federation with LDAP, ensuring secure authentication and access control. Knowledgeable in ActiveMQ (AMQ) for messaging solutions. Focused on enhancing software delivery, optimizing resource utilization, and ensuring system reliability.
+      </p>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/narendralucky333" target="_blank" rel="noopener noreferrer">narendralucky333</a></p>
-  </section>
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Red Hat Certified Specialist in Containers</li>
+        <li>Red Hat Certified OpenShift Administrator</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Narendra Prasad Neerugattu</p>
-  </footer>
+    <section>
+      <h2>Skills & Expertise</h2>
+      <ul class="skills-list">
+        <li>Operating Systems: Linux</li>
+        <li>Version Control: Git, GitHub</li>
+        <li>Containerization: Docker, Kubernetes, Helm, Kustomize</li>
+        <li>CI/CD Pipelines: Jenkins, Tekton, ArgoCD, GitHub Actions</li>
+        <li>Cloud Platforms: Azure, AWS, Red Hat OpenShift</li>
+        <li>Service Mesh: Istio, Kiali</li>
+        <li>Monitoring & Logging: ELK Stack, Grafana, Prometheus</li>
+        <li>API Management: Red Hat 3scale</li>
+        <li>Database: SQL</li>
+        <li>Scripting: Shell Scripting</li>
+        <li>Identity & Access Management: Keycloak</li>
+        <li>Build Tools: Maven</li>
+        <li>Code Quality: SonarQube</li>
+        <li>Artifact Management: Nexus</li>
+        <li>Messaging: ActiveMQ</li>
+        <li>Application Deployment: Java, Spring Boot, Python, Node.js on OpenShift</li>
+        <li>Other Tools: GitOps, ServiceNow, Advanced Cluster Management (ACM), AWS (Vpc, Route 53, EC2, IAM)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="experience">
+        <h3>DevOps Engineer, Integra Micro Software Services Pvt Ltd <small>(Oct 2022 – Present)</small></h3>
+        
+        <h4>Project 1: Financial Sector Applications – Enterprise Service Bus (ESB) (Oct 2023 – Present)</h4>
+        <p>
+          Designed and implemented a DevOps pipeline for a financial sector ESB application, serving as middleware for hundreds of microservices. Created a scalable, secure, and automated infrastructure for managing deployment, monitoring, and lifecycle of microservices.
+        </p>
+        <ul>
+          <li>Installed and configured OpenShift Container Platform (OCP) clusters in private cloud with high availability and security.</li>
+          <li>Created Tekton pipelines for continuous integration and Helm charts for multi-microservice deployments.</li>
+          <li>Implemented ArgoCD for GitOps-based continuous deployment syncing code from GitLab to OCP.</li>
+          <li>Managed APIs with Red Hat 3scale, integrating with Keycloak for authentication and LDAP user federation.</li>
+          <li>Utilized Istio for microservice communication and observability.</li>
+          <li>Set up ELK stack for centralized logging and monitoring with alerting.</li>
+          <li>Worked closely with clients to troubleshoot and ensure seamless ESB operation.</li>
+        </ul>
+      </div>
+
+      <div class="experience">
+        <h4>Project 2: Migration from Azure DevOps to GitHub & CI/CD Workflow Implementation (Dec 2022 – Oct 2023)</h4>
+        <p>
+          Migrated code repositories, workflows, and CI/CD processes from Azure DevOps to GitHub. Configured GitHub projects, roles, branch protection, and integrated self-hosted runners.
+        </p>
+        <ul>
+          <li>Transferred repos with full history from Azure DevOps to GitHub.</li>
+          <li>Implemented branch protection and code review policies.</li>
+          <li>Managed roles and permissions for secure access.</li>
+          <li>Integrated self-hosted runners for flexible CI execution.</li>
+          <li>Troubleshot Docker issues for containerized app development.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p>B.Tech in Electrical and Electronics Engineering<br />
+        Amalapuram Institute of Management Sciences and College of Engineering (AIMS), Amalapuram, 2021
+      </p>
+    </section>
+  </div>
 </body>
 </html>
