@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Love Story ❤️</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1b1b3a, #000);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* stars */
+.stars {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* header */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+}
+
+header p {
+  opacity: 0.85;
+}
+
+/* timeline */
+.timeline {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.event {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.14);
+}
+
+.event h3 {
+  margin: 0 0 8px;
+  color: #ff9bd4;
+}
+
+.event p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* final section */
+#final {
+  text-align: center;
+  padding: 60px 20px 80px;
+}
+
+#final h2 {
+  font-size: 2.2rem;
+}
+
+#final p {
+  max-width: 420px;
+  margin: 15px auto 25px;
+  line-height: 1.7;
+}
+
+/* button */
+button {
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ff5fa2, #ff3366);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* overlay */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#overlay .box {
+  background: #111;
+  border-radius: 22px;
+  max-width: 420px;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+
+#overlay h3 {
+  color: #ff9bd4;
+}
+
+/* typing effect */
+.typing {
+  border-right: 2px solid #ff9bd4;
+  white-space: pre-wrap;
+  overflow: hidden;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* photo gallery (FIXED) */
+.photo-gallery {
+  display: none;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.photo {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  display: block;
+  image-rendering: auto;
+}
+
+.photo {
+  padding: 6px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(4px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<header>
+  <h1>Narendra ❤️ Keerthi</h1>
+  <p>Not a website… our love timeline ✨</p>
+</header>
+
+<section class="timeline">
+  <div class="event" onclick="openEvent(
+    'First Meet',
+    'Aa roju gurthunda?\n\nNinnu chusinappudu world motham pause ayinattu anipinchindi.\nNuvvu telikunda naa life lo oka beautiful chapter start chesav.'
+  )">
+    <h3>🌸 The First Time</h3>
+    <p>Tap to unlock this memory</p>
+  </div>
+
+  <div class="event" onclick="openEvent(
+    'Falling in Love',
+    'Slow ga, without warning…\n\nnuvvu naa alochanallo,\nnaa rojullo,\nnaa future lo part ayipoyav.'
+  )">
+    <h3>💞 Falling in Love</h3>
+    <p>Tap to unlock this memory</p>
+  </div>
+
+  <div class="event" onclick="openEvent(
+    'Marriage',
+    'Life easy kaadu…\n\nkani nee cheyyi pattukuni unte\nedaina possible ani\nnammakam vachindi.'
+  )">
+    <h3>💍 Us Becoming One</h3>
+    <p>Tap to unlock this memory</p>
+  </div>
+</section>
+
+<section id="final">
+  <h2>And This Is Not the End…</h2>
+  <p>
+    Ee timeline lo chusina moments just beginning matrame.
+    <br /><br />
+    Ee Valentine’s Day roju,
+    oka sari kaadu…
+    prathi roju ninnu choose chesukuntanu.
+  </p>
+
+  <button onclick="openEvent(
+    'Forever',
+    'Ee life lo kadu…\n\nprathi janma lo kuda…\n\nKeerthi,\nyou are my forever Valentine. ❤️'
+  )">💖 My Promise</button>
+</section>
+
+<div id="overlay" onclick="closeEvent()">
+  <div class="box" onclick="event.stopPropagation()">
+    <h3 id="overlayTitle"></h3>
+    <p id="overlayText" class="typing"></p>
+
+    <div class="photo-gallery" id="photoGallery">
+      <div class="photo"><img src="./photos/pic1.jpg"></div>
+      <div class="photo"><img src="./photos/pic2.jpg"></div>
+      <div class="photo"><img src="./photos/pic3.jpeg"></div>
+      <div class="photo"><img src="./photos/pic4.jpeg"></div>
+    </div>
+
+    <br />
+    <button onclick="closeEvent()">Close 💫</button>
+  </div>
+</div>
+
+<script>
+let typingInterval;
+
+function typeText(element, text, speed = 40) {
+  clearInterval(typingInterval);
+  element.innerText = "";
+  let index = 0;
+
+  typingInterval = setInterval(() => {
+    if (index < text.length) {
+      element.innerText += text.charAt(index);
+      index++;
+    } else {
+      clearInterval(typingInterval);
+    }
+  }, speed);
+}
+
+function openEvent(title, text) {
+  document.getElementById('overlayTitle').innerText = title;
+  const textBox = document.getElementById('overlayText');
+  const gallery = document.getElementById('photoGallery');
+
+  gallery.style.display = 'none';
+  document.getElementById('overlay').style.display = 'flex';
+
+  typeText(textBox, text);
+
+  if (title === 'Forever') {
+    setTimeout(() => {
+      gallery.style.display = 'grid';
+    }, text.length * 40 + 500);
+  }
+}
+
+function closeEvent() {
+  document.getElementById('overlay').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
